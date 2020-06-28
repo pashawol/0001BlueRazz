@@ -407,14 +407,34 @@ iframe {
 }
 .btn-primary{
 	box-shadow: 0   rem(4px) 0 #2569BE;
+	&:hover {
+		color: #ffffff;
+
+		// background-color: $primary !important;
+		background: #3A82DA !important;
+		border-color: #3A82DA !important;
+	}
+	
+	&:focus,
+	&:active {
+		background: #2F75CB !important;
+		border-color: #2F75CB !important;
+		
+		box-shadow: 0   rem(2) 0 #2569BE !important;
+	}
 }
 .btn-white{
 	color: $primary;
-	&:focus,
 	&:hover{
 		color: #ffffff;
-		background-color: $primary !important;
-		border-color:$primary !important;
+
+		// background-color: $primary !important;
+		background: #3A82DA !important;
+		border-color: #3A82DA !important;
+	}
+	&:focus,
+	&:active{
+		
 	}
 }
 

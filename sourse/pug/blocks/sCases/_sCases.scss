@@ -37,7 +37,12 @@
 		 &__caption{
 			 padding: rem(26) rem(24) rem(10);
 		 }
-		 &__title{
+		 	&__item:hover &__title {
+		 		color: #2F75CB;
+		 	}
+
+		 	&__title {
+		 		@include mt;
 			 @extend .h5;
 			 font-weight: bold;
 			 color: $dark;

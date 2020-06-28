@@ -8,27 +8,30 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.toggle-menu-mobile--js.d-lg-none
-		span
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 		
 			+mnu()
-			.text-right
+			.p-3
+				a.top-nav__btn(href="#") ОСТАВИТЬ ЗАЯВКУ
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
 			.row
-				+e.logo.col-auto
+				+e.logo.col-lg-auto.col
 					a(href="#")
 						img(src="img/@2x/logo.png", alt="")
-				.col
+				.col.d-none.d-lg-block
 					+mnu()
-				.col-auto
+				.col-auto.d-none.d-sm-block
 					+e.btn(href="#") ОСТАВИТЬ ЗАЯВКУ
+				.col-auto.d-lg-none
+					+b.toggle-menu-mobile--js.d-lg-none
+						span
+
 					
 	// end top-nav

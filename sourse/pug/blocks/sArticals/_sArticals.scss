@@ -43,8 +43,18 @@
 	overflow: hidden;
 	box-shadow: 0 2px $btn-border-radius #d5e3f5;
 	@include mt;
+	display: block;
+	box-shadow: 0px 2px 4px #D5E3F5;
+	.text-dark{
+		@include mt;
+	}
 	&:hover{
-		box-shadow: 0 2px 23px #b6cdec;
+		box-shadow: 0px 2px 23px #B6CDEC;
+		.text-dark{
+
+		 
+			color: #2F75CB !important;  
+		}
 	}
 }
 .card-title{
@@ -83,7 +93,7 @@
 	&__number{
 		@extend .h2;
 		font-weight: bold;
-		color: #3c9b62;
+		color: #3c9b62 !important;
 		width: 82px;
 		height: 82px;
 		border-radius: 99px;

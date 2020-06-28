@@ -1,13 +1,12 @@
 mixin item-artical(i)
 	+e.col.col-lg-3.col-sm-6
-		.card()
-			a(href="#")
-				img.card-img-top(src=`img/@2x/${i}.jpg`, alt='')
+		a.card(href="#")
+			img.card-img-top(src=`img/@2x/${i}.jpg`, alt='')
 			.card-body
 				h5.card-title
-					a.text-dark(href="#") 9 плагинов Figma, которые облегчат жизнь любого дизайнера
+					.text-dark 9 плагинов Figma, которые облегчат жизнь любого дизайнера
 				p.card-text С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит...
-				a.card-link(href='#') Читать далее
+				.card-link  Читать далее
 mixin sArticals()
 	// start sArticals
 	+b.SECTION.sArticals.section#sArticals&attributes(attributes)

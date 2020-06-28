@@ -5,17 +5,17 @@ mixin sFaq()
 			+b.section-title
 				h2 Вопросы-Ответы
 			mixin item-artical(i, t, n) 
-				+b.card--horizontal.--faq.mb-4
+				+b.card--horizontal.--faq.mb-4(href="#")
 					.row.g-0
 						.col-sm-auto.col
-							a.img-circle(href="#")
+							.img-circle
 								img.card-img-top(src=`img/@2x/${i}.jpg`, alt='')
 						.col-auto.order-md-last
 							+e.number= n
 						.col-sm.align-self-center
 							.card-body
 								h5.card-title
-									a.text-dark(href="#") 9 плагинов Figma, которые облегчат жизнь любого дизайнера
+									.text-dark 9 плагинов Figma, которые облегчат жизнь любого дизайнера
 					 
 			+item-artical("faq-1",'9 плагинов Figma, которые облегчат жизнь любого дизайнера ?','3')
 			+item-artical("faq-2",'Figma, облегчат жизнь дизайнера ?',1)

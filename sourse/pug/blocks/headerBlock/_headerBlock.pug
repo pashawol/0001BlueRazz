@@ -1,9 +1,16 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+e.content
-				h1 РАЗРАБАТЫВАЕМ  ЭФФЕКТИВНЫЙ ДИЗАЙН
-				.h6 Мы&nbsp;не&nbsp;рисуем красивые картинки, мы&nbsp;анализируем, проектируем и&nbsp;разрабатываем эффективные инструменты для бизнеса.
-				a(href="#") ОСТАВИТЬ ЗАЯВКУ
+	+b.headerBlock#headerBlock&attributes(attributes)
+		+e.container.container 
+			.container 
+				+e.content
+					h1 РАЗРАБАТЫВАЕМ  ЭФФЕКТИВНЫЙ ДИЗАЙН
+					.h6 Мы&nbsp;не&nbsp;рисуем красивые картинки, мы&nbsp;анализируем, проектируем и&nbsp;разрабатываем эффективные инструменты для бизнеса.
+					a(href="#") ОСТАВИТЬ ЗАЯВКУ 
+				+b.animate-block#animate-block.d-none.d-md-block
+					+e.main
+						+e.artical#artical
+						+e.element--1#element--1
+						+e.element--2#element--2
+						+e.element--3#element--3
 	// end headerBlock

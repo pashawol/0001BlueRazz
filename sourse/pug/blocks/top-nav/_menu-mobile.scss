@@ -45,8 +45,8 @@ $h: em(2);
 	span:before {
 		// width: 32px;
 		width: 1em;
-		height: $h;
-		background-color: currentColor;
+		height: 2px;
+		background-color: $primary;
 		transition: all 0.3s;
 		backface-visibility: hidden;
 		border-radius: 6px;

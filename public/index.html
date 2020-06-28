@@ -19,21 +19,35 @@
 		<meta property="og:image:height" content="504">
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
-		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
 	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js d-lg-none">
+				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+				</div>
+				<div class="menu-mobile__inner">
+					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<li class="menu-item current-menu-item"><a href="#" itemprop="url">ПОРТФОЛИО</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">УСЛУГИ</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">БАЗА ЗНАНИЙ</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">АВТОР</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">КОНТАКТЫ</a></li>
+					</ul>
+					<div class="p-3"><a class="top-nav__btn" href="#">ОСТАВИТЬ ЗАЯВКУ</a></div>
+				</div>
+			</div>
+			<!--  мобильное меню-->
 			<!-- start header-->
 			<header class="header" id="header">
 				<!-- start top-nav-->
 				<div class="top-nav block-with-lazy">
 					<div class="container">
 						<div class="row">
-							<div class="top-nav__logo col-auto"><a href="#"><img src="img/@2x/logo.png" alt=""/></a>
+							<div class="top-nav__logo col-lg-auto col"><a href="#"><img src="img/@2x/logo.png" alt=""/></a>
 							</div>
-							<div class="col">
+							<div class="col d-none d-lg-block">
 								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 									<li class="menu-item current-menu-item"><a href="#" itemprop="url">ПОРТФОЛИО</a></li>
 									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">УСЛУГИ</a></li>
@@ -42,7 +56,11 @@
 									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">КОНТАКТЫ</a></li>
 								</ul>
 							</div>
-							<div class="col-auto"><a class="top-nav__btn" href="#">ОСТАВИТЬ ЗАЯВКУ</a>
+							<div class="col-auto d-none d-sm-block"><a class="top-nav__btn" href="#">ОСТАВИТЬ ЗАЯВКУ</a>
+							</div>
+							<div class="col-auto d-lg-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -51,11 +69,25 @@
 			</header>
 			<!-- end header-->
 			<!-- start headerBlock-->
-			<div class="headerBlock section" id="headerBlock">
-				<div class="container">
-					<div class="headerBlock__content">
-						<h1>РАЗРАБАТЫВАЕМ  ЭФФЕКТИВНЫЙ ДИЗАЙН</h1>
-						<div class="h6">Мы&nbsp;не&nbsp;рисуем красивые картинки, мы&nbsp;анализируем, проектируем и&nbsp;разрабатываем эффективные инструменты для бизнеса.</div><a href="#">ОСТАВИТЬ ЗАЯВКУ</a>
+			<div class="headerBlock" id="headerBlock">
+				<div class="headerBlock__container container"> 
+					<div class="container"> 
+						<div class="headerBlock__content">
+							<h1>РАЗРАБАТЫВАЕМ  ЭФФЕКТИВНЫЙ ДИЗАЙН</h1>
+							<div class="h6">Мы&nbsp;не&nbsp;рисуем красивые картинки, мы&nbsp;анализируем, проектируем и&nbsp;разрабатываем эффективные инструменты для бизнеса.</div><a href="#">ОСТАВИТЬ ЗАЯВКУ </a>
+						</div>
+						<div class="animate-block d-none d-md-block" id="animate-block">
+							<div class="animate-block__main">
+								<div class="animate-block__artical" id="artical">
+								</div>
+								<div class="animate-block__element animate-block__element--1" id="element--1">
+								</div>
+								<div class="animate-block__element animate-block__element--2" id="element--2">
+								</div>
+								<div class="animate-block__element animate-block__element--3" id="element--3">
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -250,37 +282,41 @@
 						<h2>Все о лендингах</h2>
 					</div>
 					<div class="row">
-						<div class="sArticals__col col-lg-3 col-sm-6">
-							<div class="card"><a href="#"><img class="card-img-top" src="img/@2x/landing-1.jpg" alt=""/></a>
+						<div class="sArticals__col col-lg-3 col-sm-6"><a class="card" href="#"><img class="card-img-top" src="img/@2x/landing-1.jpg" alt=""/>
 								<div class="card-body">
-									<h5 class="card-title"><a class="text-dark" href="#">9 плагинов Figma, которые облегчат жизнь любого дизайнера</a></h5>
-									<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит...</p><a class="card-link" href="#">Читать далее</a>
-								</div>
-							</div>
+									<h5 class="card-title">
+										<div class="text-dark">9 плагинов Figma, которые облегчат жизнь любого дизайнера</div>
+									</h5>
+									<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит...</p>
+									<div class="card-link"> Читать далее</div>
+								</div></a>
 						</div>
-						<div class="sArticals__col col-lg-3 col-sm-6">
-							<div class="card"><a href="#"><img class="card-img-top" src="img/@2x/landing-2.jpg" alt=""/></a>
+						<div class="sArticals__col col-lg-3 col-sm-6"><a class="card" href="#"><img class="card-img-top" src="img/@2x/landing-2.jpg" alt=""/>
 								<div class="card-body">
-									<h5 class="card-title"><a class="text-dark" href="#">9 плагинов Figma, которые облегчат жизнь любого дизайнера</a></h5>
-									<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит...</p><a class="card-link" href="#">Читать далее</a>
-								</div>
-							</div>
+									<h5 class="card-title">
+										<div class="text-dark">9 плагинов Figma, которые облегчат жизнь любого дизайнера</div>
+									</h5>
+									<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит...</p>
+									<div class="card-link"> Читать далее</div>
+								</div></a>
 						</div>
-						<div class="sArticals__col col-lg-3 col-sm-6">
-							<div class="card"><a href="#"><img class="card-img-top" src="img/@2x/landing-3.jpg" alt=""/></a>
+						<div class="sArticals__col col-lg-3 col-sm-6"><a class="card" href="#"><img class="card-img-top" src="img/@2x/landing-3.jpg" alt=""/>
 								<div class="card-body">
-									<h5 class="card-title"><a class="text-dark" href="#">9 плагинов Figma, которые облегчат жизнь любого дизайнера</a></h5>
-									<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит...</p><a class="card-link" href="#">Читать далее</a>
-								</div>
-							</div>
+									<h5 class="card-title">
+										<div class="text-dark">9 плагинов Figma, которые облегчат жизнь любого дизайнера</div>
+									</h5>
+									<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит...</p>
+									<div class="card-link"> Читать далее</div>
+								</div></a>
 						</div>
-						<div class="sArticals__col col-lg-3 col-sm-6">
-							<div class="card"><a href="#"><img class="card-img-top" src="img/@2x/landing-4.jpg" alt=""/></a>
+						<div class="sArticals__col col-lg-3 col-sm-6"><a class="card" href="#"><img class="card-img-top" src="img/@2x/landing-4.jpg" alt=""/>
 								<div class="card-body">
-									<h5 class="card-title"><a class="text-dark" href="#">9 плагинов Figma, которые облегчат жизнь любого дизайнера</a></h5>
-									<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит...</p><a class="card-link" href="#">Читать далее</a>
-								</div>
-							</div>
+									<h5 class="card-title">
+										<div class="text-dark">9 плагинов Figma, которые облегчат жизнь любого дизайнера</div>
+									</h5>
+									<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит...</p>
+									<div class="card-link"> Читать далее</div>
+								</div></a>
 						</div>
 					</div>
 				</div>
@@ -293,37 +329,41 @@
 						<h2>Про интернет-магазины</h2>
 					</div>
 					<div class="row">
-						<div class="sArticals__col col-lg-3 col-sm-6">
-							<div class="card"><a href="#"><img class="card-img-top" src="img/@2x/shop-1.jpg" alt=""/></a>
+						<div class="sArticals__col col-lg-3 col-sm-6"><a class="card" href="#"><img class="card-img-top" src="img/@2x/shop-1.jpg" alt=""/>
 								<div class="card-body">
-									<h5 class="card-title"><a class="text-dark" href="#">9 плагинов Figma, которые облегчат жизнь любого дизайнера</a></h5>
-									<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит...</p><a class="card-link" href="#">Читать далее</a>
-								</div>
-							</div>
+									<h5 class="card-title">
+										<div class="text-dark">9 плагинов Figma, которые облегчат жизнь любого дизайнера</div>
+									</h5>
+									<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит...</p>
+									<div class="card-link"> Читать далее</div>
+								</div></a>
 						</div>
-						<div class="sArticals__col col-lg-3 col-sm-6">
-							<div class="card"><a href="#"><img class="card-img-top" src="img/@2x/shop-2.jpg" alt=""/></a>
+						<div class="sArticals__col col-lg-3 col-sm-6"><a class="card" href="#"><img class="card-img-top" src="img/@2x/shop-2.jpg" alt=""/>
 								<div class="card-body">
-									<h5 class="card-title"><a class="text-dark" href="#">9 плагинов Figma, которые облегчат жизнь любого дизайнера</a></h5>
-									<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит...</p><a class="card-link" href="#">Читать далее</a>
-								</div>
-							</div>
+									<h5 class="card-title">
+										<div class="text-dark">9 плагинов Figma, которые облегчат жизнь любого дизайнера</div>
+									</h5>
+									<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит...</p>
+									<div class="card-link"> Читать далее</div>
+								</div></a>
 						</div>
-						<div class="sArticals__col col-lg-3 col-sm-6">
-							<div class="card"><a href="#"><img class="card-img-top" src="img/@2x/shop-3.jpg" alt=""/></a>
+						<div class="sArticals__col col-lg-3 col-sm-6"><a class="card" href="#"><img class="card-img-top" src="img/@2x/shop-3.jpg" alt=""/>
 								<div class="card-body">
-									<h5 class="card-title"><a class="text-dark" href="#">9 плагинов Figma, которые облегчат жизнь любого дизайнера</a></h5>
-									<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит...</p><a class="card-link" href="#">Читать далее</a>
-								</div>
-							</div>
+									<h5 class="card-title">
+										<div class="text-dark">9 плагинов Figma, которые облегчат жизнь любого дизайнера</div>
+									</h5>
+									<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит...</p>
+									<div class="card-link"> Читать далее</div>
+								</div></a>
 						</div>
-						<div class="sArticals__col col-lg-3 col-sm-6">
-							<div class="card"><a href="#"><img class="card-img-top" src="img/@2x/shop-4.jpg" alt=""/></a>
+						<div class="sArticals__col col-lg-3 col-sm-6"><a class="card" href="#"><img class="card-img-top" src="img/@2x/shop-4.jpg" alt=""/>
 								<div class="card-body">
-									<h5 class="card-title"><a class="text-dark" href="#">9 плагинов Figma, которые облегчат жизнь любого дизайнера</a></h5>
-									<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит...</p><a class="card-link" href="#">Читать далее</a>
-								</div>
-							</div>
+									<h5 class="card-title">
+										<div class="text-dark">9 плагинов Figma, которые облегчат жизнь любого дизайнера</div>
+									</h5>
+									<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит...</p>
+									<div class="card-link"> Читать далее</div>
+								</div></a>
 						</div>
 					</div>
 				</div>
@@ -337,47 +377,51 @@
 							<div class="container">
 								<div class="section-title">
 									<h2>Новые статьи</h2>
-								</div>
-									<div class="card card--horizontal mb-4">
-										<div class="row g-0"><a class="col-sm-4" href="#"><img class="card-img-top" src="img/@2x/artical-1.jpg" alt=""/></a>
-											<div class="col align-self-center">
-												<div class="card-body">
-													<h5 class="card-title"><a class="text-dark" href="#">9 плагинов Figma, которые облегчат жизнь любого дизайнера</a></h5>
-													<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит... </p>
-												</div>
+								</div><a class="card card--horizontal mb-4" href="#">
+									<div class="row g-0">
+										<div class="col-sm-4"><img class="card-img-top" src="img/@2x/artical-1.jpg" alt=""/></div>
+										<div class="col align-self-center">
+											<div class="card-body">
+												<h5 class="card-title">
+													<div class="text-dark" href="#">9 плагинов Figma, которые облегчат жизнь любого дизайнера</div>
+												</h5>
+												<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит... </p>
 											</div>
 										</div>
-									</div>
-									<div class="card card--horizontal mb-4">
-										<div class="row g-0"><a class="col-sm-4" href="#"><img class="card-img-top" src="img/@2x/artical-2.jpg" alt=""/></a>
-											<div class="col align-self-center">
-												<div class="card-body">
-													<h5 class="card-title"><a class="text-dark" href="#">9 плагинов Figma, которые облегчат жизнь любого дизайнера</a></h5>
-													<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит... </p>
-												</div>
+									</div></a><a class="card card--horizontal mb-4" href="#">
+									<div class="row g-0">
+										<div class="col-sm-4"><img class="card-img-top" src="img/@2x/artical-2.jpg" alt=""/></div>
+										<div class="col align-self-center">
+											<div class="card-body">
+												<h5 class="card-title">
+													<div class="text-dark" href="#">9 плагинов Figma, которые облегчат жизнь любого дизайнера</div>
+												</h5>
+												<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит... </p>
 											</div>
 										</div>
-									</div>
-									<div class="card card--horizontal mb-4">
-										<div class="row g-0"><a class="col-sm-4" href="#"><img class="card-img-top" src="img/@2x/artical-3.jpg" alt=""/></a>
-											<div class="col align-self-center">
-												<div class="card-body">
-													<h5 class="card-title"><a class="text-dark" href="#">9 плагинов Figma, которые облегчат жизнь любого дизайнера</a></h5>
-													<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит... </p>
-												</div>
+									</div></a><a class="card card--horizontal mb-4" href="#">
+									<div class="row g-0">
+										<div class="col-sm-4"><img class="card-img-top" src="img/@2x/artical-3.jpg" alt=""/></div>
+										<div class="col align-self-center">
+											<div class="card-body">
+												<h5 class="card-title">
+													<div class="text-dark" href="#">9 плагинов Figma, которые облегчат жизнь любого дизайнера</div>
+												</h5>
+												<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит... </p>
 											</div>
 										</div>
-									</div>
-									<div class="card card--horizontal mb-4">
-										<div class="row g-0"><a class="col-sm-4" href="#"><img class="card-img-top" src="img/@2x/artical-4.jpg" alt=""/></a>
-											<div class="col align-self-center">
-												<div class="card-body">
-													<h5 class="card-title"><a class="text-dark" href="#">9 плагинов Figma, которые облегчат жизнь любого дизайнера</a></h5>
-													<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит... </p>
-												</div>
+									</div></a><a class="card card--horizontal mb-4" href="#">
+									<div class="row g-0">
+										<div class="col-sm-4"><img class="card-img-top" src="img/@2x/artical-4.jpg" alt=""/></div>
+										<div class="col align-self-center">
+											<div class="card-body">
+												<h5 class="card-title">
+													<div class="text-dark" href="#">9 плагинов Figma, которые облегчат жизнь любого дизайнера</div>
+												</h5>
+												<p class="card-text">С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит... </p>
 											</div>
 										</div>
-									</div>
+									</div></a>
 							</div>
 						</section>
 						<!-- end sNews-->
@@ -388,63 +432,63 @@
 							<div class="container">
 								<div class="section-title">
 									<h2>Вопросы-Ответы</h2>
-								</div>
-									<div class="card card--horizontal card--faq mb-4">
-										<div class="row g-0">
-											<div class="col-sm-auto col"><a class="img-circle" href="#"><img class="card-img-top" src="img/@2x/faq-1.jpg" alt=""/></a></div>
-											<div class="col-auto order-md-last">
-												<div class="card__number">3
-												</div>
-											</div>
-											<div class="col-sm align-self-center">
-												<div class="card-body">
-													<h5 class="card-title"><a class="text-dark" href="#">9 плагинов Figma, которые облегчат жизнь любого дизайнера</a></h5>
-												</div>
+								</div><a class="card card--horizontal card--faq mb-4" href="#">
+									<div class="row g-0">
+										<div class="col-sm-auto col">
+											<div class="img-circle"><img class="card-img-top" src="img/@2x/faq-1.jpg" alt=""/></div>
+										</div>
+										<div class="col-auto order-md-last"><span class="card__number">3</span>
+										</div>
+										<div class="col-sm align-self-center">
+											<div class="card-body">
+												<h5 class="card-title">
+													<div class="text-dark">9 плагинов Figma, которые облегчат жизнь любого дизайнера</div>
+												</h5>
 											</div>
 										</div>
-									</div>
-									<div class="card card--horizontal card--faq mb-4">
-										<div class="row g-0">
-											<div class="col-sm-auto col"><a class="img-circle" href="#"><img class="card-img-top" src="img/@2x/faq-2.jpg" alt=""/></a></div>
-											<div class="col-auto order-md-last">
-												<div class="card__number">1
-												</div>
-											</div>
-											<div class="col-sm align-self-center">
-												<div class="card-body">
-													<h5 class="card-title"><a class="text-dark" href="#">9 плагинов Figma, которые облегчат жизнь любого дизайнера</a></h5>
-												</div>
+									</div></a><a class="card card--horizontal card--faq mb-4" href="#">
+									<div class="row g-0">
+										<div class="col-sm-auto col">
+											<div class="img-circle"><img class="card-img-top" src="img/@2x/faq-2.jpg" alt=""/></div>
+										</div>
+										<div class="col-auto order-md-last"><span class="card__number">1</span>
+										</div>
+										<div class="col-sm align-self-center">
+											<div class="card-body">
+												<h5 class="card-title">
+													<div class="text-dark">9 плагинов Figma, которые облегчат жизнь любого дизайнера</div>
+												</h5>
 											</div>
 										</div>
-									</div>
-									<div class="card card--horizontal card--faq mb-4">
-										<div class="row g-0">
-											<div class="col-sm-auto col"><a class="img-circle" href="#"><img class="card-img-top" src="img/@2x/faq-3.jpg" alt=""/></a></div>
-											<div class="col-auto order-md-last">
-												<div class="card__number">6
-												</div>
-											</div>
-											<div class="col-sm align-self-center">
-												<div class="card-body">
-													<h5 class="card-title"><a class="text-dark" href="#">9 плагинов Figma, которые облегчат жизнь любого дизайнера</a></h5>
-												</div>
+									</div></a><a class="card card--horizontal card--faq mb-4" href="#">
+									<div class="row g-0">
+										<div class="col-sm-auto col">
+											<div class="img-circle"><img class="card-img-top" src="img/@2x/faq-3.jpg" alt=""/></div>
+										</div>
+										<div class="col-auto order-md-last"><span class="card__number">6</span>
+										</div>
+										<div class="col-sm align-self-center">
+											<div class="card-body">
+												<h5 class="card-title">
+													<div class="text-dark">9 плагинов Figma, которые облегчат жизнь любого дизайнера</div>
+												</h5>
 											</div>
 										</div>
-									</div>
-									<div class="card card--horizontal card--faq mb-4">
-										<div class="row g-0">
-											<div class="col-sm-auto col"><a class="img-circle" href="#"><img class="card-img-top" src="img/@2x/faq-4.jpg" alt=""/></a></div>
-											<div class="col-auto order-md-last">
-												<div class="card__number">1
-												</div>
-											</div>
-											<div class="col-sm align-self-center">
-												<div class="card-body">
-													<h5 class="card-title"><a class="text-dark" href="#">9 плагинов Figma, которые облегчат жизнь любого дизайнера</a></h5>
-												</div>
+									</div></a><a class="card card--horizontal card--faq mb-4" href="#">
+									<div class="row g-0">
+										<div class="col-sm-auto col">
+											<div class="img-circle"><img class="card-img-top" src="img/@2x/faq-4.jpg" alt=""/></div>
+										</div>
+										<div class="col-auto order-md-last"><span class="card__number">1</span>
+										</div>
+										<div class="col-sm align-self-center">
+											<div class="card-body">
+												<h5 class="card-title">
+													<div class="text-dark">9 плагинов Figma, которые облегчат жизнь любого дизайнера</div>
+												</h5>
 											</div>
 										</div>
-									</div>
+									</div></a>
 								<div class="sFaq__foot row">
 									<div class="col-6 text-secondary">
 										<div class="strong">Есть вопрос? </div>Вы можете задать его нашим специалистам
@@ -551,22 +595,12 @@
 			<!-- #modal-call-->
 		</div>
 		<!-- modal-->
-		<script src="js/lazy.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>
-		<!-- полифил для picture-->
-		<script src="libs/picturefill/picturefill.min.js"></script>
-		<!-- полифил для object-fit-->
-		<script src="libs/object-fit-images/ofi.min.js"></script>
 		<!-- modal libs-->
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
-		<!-- modal libs-->
-		<!-- slider libs-->
-		<script src="libs/swiper/js/swiper.min.js"></script>
-		<!-- /slider libs-->
-		<!-- for svg libs-->
-		<script src="libs/svg4everybody/svg4everybody.min.js"></script>
-		<!-- /for svg libs-->
-		<script src="libs/inputmask/jquery.inputmask.min.js"></script>
+		<!-- modal libs--><script src="js/TweenMax.min.js"></script>
+<script src="js/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+<script src="js/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

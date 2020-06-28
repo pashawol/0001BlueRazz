@@ -49,6 +49,8 @@
 				margin-left: 6%;
 			}
 		}
+
+	
 		&__icon-wrap{
 			@include media-breakpoint-up(sm) {
 
@@ -98,7 +100,11 @@
 			}
 		}
 	}
+		&__item:hover &__title {
+			color: #2F75CB;
+		}
 		&__title{
+			@include mt;
 			@extend .h5;
 			line-height: ($h5-font-size / $h6-font-size);
 			text-transform: uppercase;

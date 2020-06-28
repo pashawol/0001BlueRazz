@@ -2,13 +2,25 @@
 	border-bottom: 1px solid #EAEAEA;
 	font-size: $h6-font-size;
 	font-weight: bold;
-	position: absolute;
+	// position: absolute;
+	position: fixed;
 	text-transform: uppercase;
 	left: 0;
 	top: 0;
 	width: 100%;
-	padding-top: rem(21);
-	padding-bottom: rem(21);
+	@include mt;
+	@include media-breakpoint-up(sm) {
+		
+		--pt: #{rem(21)};
+	}
+	--pt: #{rem(5)};
+	padding-top: var(--pt);
+	padding-bottom: var(--pt);
+	&.fixed{
+		--pt: #{rem(1)};
+		background-color: #ffffff;
+
+	}
 	z-index: 200;
 	.row{
 
@@ -30,7 +42,10 @@
 		}
 	}
 	&__logo{
-		width: rem(240);
+		@include media-breakpoint-up(xl) {
+
+			width: rem(240);
+		}
 		img{
 			@extend .res-i;
 		}
@@ -38,7 +53,10 @@
 	&__btn{
 		@extend .btn;
 		@extend .btn-white;
-		width: rem(208);
+		@include media-breakpoint-up(xl) {
+
+			width: rem(208);
+		}
 	}
 	
 	// 

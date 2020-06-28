@@ -73,13 +73,7 @@ const JSCCommon = {
 		if (_this.menuMobileLink) {
 
 			_this.toggleMenu();
-			_this.menuMobileLink.forEach(function (element) {
-				element.addEventListener('click', function (e) {
-					console.log(element);
-					_this.closeMenu();
-
-				});
-			})
+		 
 			document.addEventListener('mouseup', function (event) {
 				let container = event.target.closest(".menu-mobile--js.active"); // (1)
 				if (!container) {
@@ -90,74 +84,24 @@ const JSCCommon = {
 		}
 	},
 	// /mobileMenu
-
-	// табы  . 
-	tabscostume(tab) {
-		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this)
-				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).show().addClass('active');
-
-		});
-	},
-	// /табы  
-	inputMask() {
-		// mask for input
-		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
-	}
-	// /inputMask
+ 
 
 };
 
 function eventHandler() {
-	// полифил для object-fit
-	objectFitImages();
-	// Picture element HTML5 shiv
-	document.createElement("picture");
-	// для свг
-	svg4everybody({});
+  
 
-	JSCCommon.modalCall();
-
-	JSCCommon.tabscostume('tabs');
+	JSCCommon.modalCall(); 
 
 	JSCCommon.mobileMenu();
-
-	JSCCommon.inputMask();
-
-	// JSCCommon.CustomInputFile();
-	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
-	// /добавляет подложку для pixel perfect
-
-
-
-	// const url = document.location.href;
-	// $.each($(".top-nav__nav a "), function() {
-
-	// 	if (this.href == url) {
-	// 		if ($(this).hasClass("top-nav__link") == true) {
-
-	// 			$(this).addClass('top-nav__link-active');
-	// 		}
-	// 		if ($(this).hasClass("footer__link") == true) {
-
-	// 			$(this).addClass('footer__link-active');
-	// 		} 
-	// 	}; 
-	// }); 
+ 
+ 
 
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
 
-		const w = $(window).width();
-
-		// $(".main-wrapper").css("margin-bottom", $('footer').height())
-		// $(".otz__item .text-wrap ").height('auto').equalHeights();
-		// 
-		// скрывает моб меню
+		const w = $(window).width(); 
 
 		const topH = $("header ").innerHeight();
 
@@ -191,107 +135,32 @@ function eventHandler() {
 		return false;
 	});
 
-	let defaultSl = {
+ 
+	function animateElem() {
+		var controller = new ScrollMagic.Controller();
 
-	}
-	const swiper4 = new Swiper('.color-slider', {
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		watchOverflow: true,
-		spaceBetween: 0,
-		freeMode: true,
-		watchOverflow: true,
-		slidesPerGroup: 3,
+		// define movement of panels
+		var wipeAnimation = new TimelineMax()
+			.fromTo(...arguments) // in from left
 
-		// centeredSlides: true,
-		loop: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-
-	});
-	// modal window
-
-	var gets = (function () {
-		var a = window.location.search;
-		var b = new Object();
-		var c;
-		a = a.substring(1).split("&");
-		for (var i = 0; i < a.length; i++) {
-			c = a[i].split("=");
-			b[c[0]] = c[1];
-		}
-		return b;
-	})();
-	// form
-
-
-	var gets = (function () {
-		var a = window.location.search;
-		var b = new Object();
-		var c;
-		a = a.substring(1).split("&");
-		for (var i = 0; i < a.length; i++) {
-			c = a[i].split("=");
-			b[c[0]] = c[1];
-		}
-		return b;
-	})();
-	// form
-	$("form").submit(function (e) {
-		e.preventDefault();
-		const th = $(this);
-		var data = th.serialize();
-		th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-		th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-		th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-		th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-		$.ajax({
-			url: 'action.php',
-			type: 'POST',
-			data: data,
-		}).done(function (data) {
-
-			$.fancybox.close();
-			$.fancybox.open({
-				src: '#modal-thanks',
-				type: 'inline'
-			});
-			// window.location.replace("/thanks.html");
-			setTimeout(function () {
-				// Done Functions
-				th.trigger("reset");
-				// $.magnificPopup.close();
-				// ym(53383120, 'reachGoal', 'zakaz');
-				// yaCounter55828534.reachGoal('zakaz');
-			}, 4000);
-		}).fail(function () { });
-
-	});
-
-	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-	if (isIE11) {
-		$("body").prepend(`<p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p>`)
-
+		// create scene to pin and link animation
+		new ScrollMagic.Scene({
+			triggerElement: this,
+			triggerHook: "onLeave",
+			duration: "100%"
+		})
+			// .setPin("#sBrendRepresent")
+			.setTween(wipeAnimation)
+			// .addIndicators() // add indicators (requires plugin)
+			.addTo(controller);
 	}
 
-	// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-	let vh = window.innerHeight * 0.01;
-	// Then we set the value in the --vh custom property to the root of the document
-	document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-	// We listen to the resize event
-	window.addEventListener('resize', () => {
-		// We execute the same script as before
-		let vh = window.innerHeight * 0.01;
-		document.documentElement.style.setProperty('--vh', `${vh}px`);
-	});
+	//axilary funcs
+	animateElem.call("#headerBlock", '#artical', .1, { y: -80, x: -50 }, { y: 100, x: 0 });
+	animateElem.call("#headerBlock", '#element--1', .1, { y: -80, x: -150 }, { y: 100, x: 0 });
+	animateElem.call("#headerBlock", '#element--2', .1, { y: 80, x: 150 }, { y: -50, x: -50 });
+	// animateElem.call("#headerBlock", '#element--3', .1, { y: -80, x: -50 }, { y: 100, x: 0 });
+ 
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
