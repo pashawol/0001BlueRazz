@@ -1,0 +1,20 @@
+mixin sAbout()
+	// start sAbout
+	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Популярное о&nbsp;дизайне для бизнеса
+				
+			.row
+				mixin item(i,t)
+					+e.col.col-lg
+						+e.item(href="#").img-wrap.bg-wrap
+							img.img-bg.object-fit-js(src=`img/@2x/popular-${i}.jpg` alt="")
+							div
+								+e.DIV.label Дизайн сайтов
+								+e.DIV.caption
+									+e.DIV.title= t
+				+item('1','Чек-лист увеличения конверсии интернет-магазина')
+				+item('2','Ключевые компоненты бренда')
+				+item('3','Страница благодарности — как сделать Thank You Page эффективной')
+	// end sAbout

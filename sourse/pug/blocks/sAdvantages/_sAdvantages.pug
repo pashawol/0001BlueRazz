@@ -1,0 +1,15 @@
+mixin sAdvantages()
+	// start sAdvantages
+	+b.sAdvantages.section#sAdvantages&attributes(attributes)
+		.container
+			.row
+				mixin item(i,t,p)
+					+e.col.col-lg-4.col-md-6
+						+e.icon-wrap
+							+icon(i)
+						+e.title!= t
+						p!= p
+				+item(`trophy-alt`,`Более 9&nbsp;лет опыта работы`,`Работаем с&nbsp;2008&nbsp;года. За&nbsp;это время протестировали множество методов реализаций самых разных задач.`)
+				+item(`vial`,`внимание к&nbsp;деталям`,`Благодаря опыту и&nbsp;отточенному перфекционизму эффективно делаем&nbsp;то, что другие даже не&nbsp;заметят.`)
+				+item(`crosshairs`,`ориентированность на&nbsp;результат`,`Опыт создания, продвижения и&nbsp;управление собственными и&nbsp;клиентскими бизнесами научил акцентироваться на&nbsp;результате, а&nbsp;не&nbsp;красивой картинке.`)
+	// end sAdvantages

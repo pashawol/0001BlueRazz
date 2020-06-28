@@ -3,6 +3,14 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAdvantages/_sAdvantages.pug 
+include ../blocks/sWork/_sWork.pug 
+include ../blocks/sCases/_sCases.pug 
+include ../blocks/sAbout/_sAbout.pug 
+include ../blocks/sArticals/_sArticals.pug 
+include ../blocks/sNews/_sNews.pug 
+include ../blocks/sFaq/_sFaq.pug 
+include ../blocks/sArticals/_sArticals.pug 
 
 block variables
 	- let  mainPage= null
@@ -13,9 +21,23 @@ block pagecontent
 	//- +mob-mnu()
 	+header()
 		+top-nav()
-		+topLine() 
+		//- +topLine() 
 	+headerBlock()
-	+sForm()
-	+sContact()
+	+sAdvantages
+	+sWork
+	+sCases
+	+sAbout
+	+sArticals
+	.container
+		.row
+			.col-lg-6
+				+sNews
+			.col-lg-6
+				+sFaq
+	section.section.sContent
+		.container
+			h2(style="#20426b") Все о&nbsp;веб дизайне: #[span(style="color: #286ec8;") от&nbsp;обложки вк&nbsp;до&nbsp;разработки интернет-магазина]
+			p Сайт &laquo;СиняяМалина&raquo; создан, чтобы собрать все знания веб дизайнера, накопленные за&nbsp;более, чем 10&nbsp;лет работы, в&nbsp;одном месте.
+			p Мы&nbsp;ориентированы на&nbsp;бизнес, чтобы вы&nbsp;могли понять как правильно подобрать цвет для бренда, как отличить хороший логотип от&nbsp;плохого, поняли ценность дизайна сайта, от&nbsp;лендинга или блога до&nbsp;интернет-магазина и&nbsp;как дизайн влияет на&nbsp;конверсию.
 	+footer()
 	

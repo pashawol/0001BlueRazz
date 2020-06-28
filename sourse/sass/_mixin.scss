@@ -54,15 +54,16 @@
 
 
 @mixin roww($a) {
-  margin-left: rem(-$a);
-  margin-right: rem(-$a);
+  --bs-gutter-x: #{$a};
+
+  margin-left: calc(var(--bs-gutter-x)/ -2);
+  margin-right: calc(var(--bs-gutter-x)/ -2);
 
   >* {
-    padding-left: rem($a);
-    padding-right: rem($a);
+    padding-left: calc(var(--bs-gutter-x)/2);
+    padding-right: calc(var(--bs-gutter-x)/2);
   }
 }
-
 @mixin center($w) {
   margin-left: auto;
   margin-right: auto;

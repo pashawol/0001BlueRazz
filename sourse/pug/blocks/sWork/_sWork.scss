@@ -1,0 +1,133 @@
+
+	// start .sWork
+	.sWork {
+		position: relative;
+		// z-index: 2;
+			&::before {
+				content: '';
+				background: #2F75CB;
+				mix-blend-mode: normal;
+				opacity: 0.07;
+				transform: skewX(-120deg);
+				position: absolute;
+				right: 100%;
+				// right: 0;
+				transform-origin: top right;
+				top: 0;
+				z-index: -1;
+				width: rem(1000px);
+				height: 600%;
+		
+			}
+		.row{
+			// align-items: center;
+		}
+		&__item{
+			border-radius: 2px;
+			background-color: #ffffff;
+			min-height: 100%;
+			display: flex;
+			align-items: center;
+			align-items: center;
+			color: $secondary;
+			@include media-breakpoint-up(sm){
+				padding: 0;
+			}
+			padding: rem(10) 0 ;
+			padding-right: rem(15);
+			&:hover{
+				box-shadow: 0px 2px 4px #D5E3F5;
+			}
+			.icon{
+				color: $primary; 
+				@include media-breakpoint-up(sm){
+
+					font-size: $h2-font-size;  
+				}
+				font-size: ($h2-font-size * .66);
+			 
+				margin-left: 6%;
+			}
+		}
+		&__icon-wrap{
+			@include media-breakpoint-up(sm) {
+
+				width: rem(142);
+				height: rem(159);
+			}
+			width: rem(142 * .66);
+			height: rem(159 * .66);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: rem(10);
+			background-image: url(../img/svg/polygon-lg.svg);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			// flex-grow: 1;
+			flex:  0 0 auto;
+			
+		}
+		@include media-breakpoint-up(xl) {
+
+			&__col--left &__icon-wrap{
+				width: rem(100);
+				height: rem(112);
+				
+			}
+			&__col-inner{
+	
+				&:nth-child(1){
+					margin-bottom: rem(26);
+					
+				}
+			}
+		}
+		&__col{
+			margin-bottom: rem(26);
+
+		}
+		@include media-breakpoint-up(xl) {
+
+			&__col--left &__item {
+				min-height: 1px;
+			.icon{
+				font-size: $h3-font-size;
+				margin-left: 6%;
+			}
+		}
+	}
+		&__title{
+			@extend .h5;
+			line-height: ($h5-font-size / $h6-font-size);
+			text-transform: uppercase;
+			color: $dark;
+			max-width: rem(145);
+		}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.sWork

@@ -1,0 +1,34 @@
+mixin item-artical(i)
+	+e.col.col-lg-3.col-sm-6
+		.card()
+			a(href="#")
+				img.card-img-top(src=`img/@2x/${i}.jpg`, alt='')
+			.card-body
+				h5.card-title
+					a.text-dark(href="#") 9 плагинов Figma, которые облегчат жизнь любого дизайнера
+				p.card-text С небольшим запозданием публикую подборку плагинов, без которых вы больше не сможете представит...
+				a.card-link(href='#') Читать далее
+mixin sArticals()
+	// start sArticals
+	+b.SECTION.sArticals.section#sArticals&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Все о лендингах
+			.row
+				+item-artical("landing-1")
+				+item-artical("landing-2")
+				+item-artical("landing-3")
+				+item-artical("landing-4")
+	// end sArticals
+ 
+	// start sArticals
+	+b.SECTION.sArticals.section#sArticals&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Про интернет-магазины
+			.row
+				+item-artical("shop-1")
+				+item-artical("shop-2")
+				+item-artical("shop-3")
+				+item-artical("shop-4")
+	// end sArticals

@@ -1,0 +1,27 @@
+mixin sWork()
+	// start sWork
+	+b.SECTION.sWork.section#sWork&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Что мы делаем ?
+				
+			.row
+				mixin item(i,t,p)
+					+e.item(href='#')
+						+e.DIV.icon-wrap
+							+icon(i)
+						+e.DIV.caption
+							+e.DIV.title!= t
+							if p
+								p!= p
+				+e.col--left.col-xl-4
+					.row
+						+e.col-inner.col-xl-12.col-md-6
+							+item(`pencil-alt`,`аудит сайтов`)
+						+e.col-inner.col-xl-12.col-md-6
+							+item(`sitemap`,`Прототипирование`)
+				+e.col.col
+					+item(`paint-brush`,`Дизайн сайтов`,`Хороший дизайн&nbsp;&mdash; это довольные пользователи и&nbsp;лояльные клиенты.`)
+				+e.col.col
+					+item(`code`,`Разработка под&nbsp;ключ`,`Разрабатываем сайты с&nbsp;продуманным Usability, которые приносят прибыль`)
+	// end sWork

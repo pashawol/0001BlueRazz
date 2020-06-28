@@ -1,0 +1,30 @@
+mixin sFaq()
+	// start sFaq
+	+b.SECTION.sFaq.section#sFaq&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Вопросы-Ответы
+			mixin item-artical(i, t, n) 
+				+b.card--horizontal.--faq.mb-4
+					.row.g-0
+						.col-sm-auto.col
+							a.img-circle(href="#")
+								img.card-img-top(src=`img/@2x/${i}.jpg`, alt='')
+						.col-auto.order-md-last
+							+e.number= n
+						.col-sm.align-self-center
+							.card-body
+								h5.card-title
+									a.text-dark(href="#") 9 плагинов Figma, которые облегчат жизнь любого дизайнера
+					 
+			+item-artical("faq-1",'9 плагинов Figma, которые облегчат жизнь любого дизайнера ?','3')
+			+item-artical("faq-2",'Figma, облегчат жизнь дизайнера ?',1)
+			+item-artical("faq-3",'9 плагинов Figma, которые облегчат жизнь любого дизайнера ?',6)
+			+item-artical("faq-4",'Figma, облегчат жизнь дизайнера ?',1)
+			+e.foot.row
+				.col-6.text-secondary
+					.strong Есть вопрос? 
+					| Вы можете задать его нашим специалистам
+				.col
+					a.btn.btn-primary.btn-block(href="#") Задать вопрос
+	// end sFaq

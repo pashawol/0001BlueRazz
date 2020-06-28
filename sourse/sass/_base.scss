@@ -19,6 +19,9 @@ html {
 
 body,
 html {
+	@include media-breakpoint-up(xxl){
+		font-size: 16px;
+	}
 	font-size: $em-base;
 	// @include font-size(1rem);
 }
@@ -28,10 +31,19 @@ html {
 	@include bgs; 
 	padding-top: var(--sPT);
 	padding-bottom: var(--sPB);
+	h2{
+		line-height: 1;
+		color: $dark;
+		@extend .mono;
+	}
 }
 
 .section-title { 
 	padding-bottom: var(--sTPB);
+	&__text{
+		color: $secondary; 
+		font-size: rem(15px);
+	}
 }
 
 body {
@@ -389,4 +401,26 @@ img.img-bg,
 
 iframe {
 	border: none;
+}
+.btn{
+	font-weight: bold;
+}
+.btn-primary{
+	box-shadow: 0   rem(4px) 0 #2569BE;
+}
+.btn-white{
+	color: $primary;
+	&:focus,
+	&:hover{
+		color: #ffffff;
+		background-color: $primary !important;
+		border-color:$primary !important;
+	}
+}
+
+.container{
+	.container{
+		padding-left: 0;
+		padding-right: 0;
+	}
 }

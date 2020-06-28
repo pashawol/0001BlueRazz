@@ -1,17 +1,53 @@
 // start .headerBlock
 .headerBlock {
+	background-color: #f8f8f8;
 	margin-bottom: 1px;
 	min-height: 100vh;
 	min-height: calc(var(--vh, 1vh) * 100);
-	// background-image: url(../img);
-	// background-color: #000000;
-
-	h1 {
-		margin-bottom: 1px;
+	padding: rem(60) 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+	z-index: 2;
+	position: relative;
+	overflow: hidden;
+	border: $btn-border-radius solid   #eaeff5;
+	&::before{
+		content: '';
+		background: #2F75CB;
+		mix-blend-mode: normal;
+		opacity: 0.07;
+		transform: skewX(120deg);
+		position: absolute;
+		left: 100%;
+		// right: 0;
+		transform-origin: top left;
+		top: 0;
+		z-index: -1;
+		width: rem(800);
+		height: 100%;
 	}
-
-	h2 {
-		margin-bottom: 1px;
+	&__content{
+		max-width: rem(390);
+		position: relative;
+		z-index: 2;
+	}
+	h1{
+		color: #20426B;
+		line-height: 1;
+		@extend .mono;
+		margin-bottom: rem(20);
+	}
+	.h6{
+		font-weight: normal;
+		line-height: (20 / 16);
+		margin-bottom: rem(24);
+	}
+	a{
+		@extend .btn;
+		@extend .btn-primary;
+		width: rem(208);
 	}
 
 	@include media-breakpoint-up(xl) {}

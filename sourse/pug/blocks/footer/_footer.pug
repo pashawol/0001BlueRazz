@@ -1,4 +1,37 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
-		.container
-			h2 footer
+		+e.body
+			.container
+				.row
+					.col-xl.col-lg
+						+e.logo
+							a(href="#")
+								img(src="img/@2x/logo.png", alt="")
+						+e.link(href="mailto:mail@bluerazz.ru") 
+							+icon('envelope')
+							| mail@bluerazz.ru
+					.col-xl-3.col-auto
+						+e.title студия
+						ul
+							li: a(href="#") Услуги
+							li: a(href="#") Портфолио
+							li: a(href="#") База знаний
+							li: a(href="#") Портфолио
+							li: a(href="#") Контакты
+							
+					.col-xl-3.col-auto
+						+e.title база знаний
+						ul
+							li: a(href="#") Как увеличить конверсию Landing page?
+							li: a(href="#") 100 полезных сервисов для бизнеса
+							li: a(href="#") Чего не хватает Вашему проекту?
+							li: a(href="#") Что такое UX ?
+					.col-xl-3.col-auto
+						+e.title ОНЛАЙН БРИФЫ
+						ul
+							- for (var x = 0; x < 3; x++)
+								li: a(href="#") 
+									+icon('file-alt')
+									| Бриф на создание сайта
+		+e.footer
+			.container © 2020 Дизайн сайтов, приложений BlueRazz

@@ -1,0 +1,96 @@
+
+	// start .sArticals
+	.sArticals {
+		 background-color: #f3f6f9;
+		 &__col{
+			 margin-bottom: 30px;
+			 .card{
+				 min-height: 100%;
+			 }
+		 }
+
+		 &__foot{
+			 .text-secondary { 
+				 line-height: 1;
+				}
+		 }
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.sArticals
+.card{
+	overflow: hidden;
+	box-shadow: 0 2px $btn-border-radius #d5e3f5;
+	@include mt;
+	&:hover{
+		box-shadow: 0 2px 23px #b6cdec;
+	}
+}
+.card-title{
+	line-height: 1.2;
+}
+.card-text{
+	color: #95aac5;
+}
+.card--horizontal{
+	box-shadow: none;
+	img{
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.img-circle{
+	width: rem(82px);
+	height: rem(82px);
+	border-radius: 50%;
+	position: relative;
+	overflow: hidden;
+	display: block;
+ 
+}
+
+.card {
+	&--faq{
+
+		border-radius: 18px;
+		background-color: #ffffff;
+		padding: rem(14);
+		.row{
+			align-items: center;
+		}
+	}
+	&__number{
+		@extend .h2;
+		font-weight: bold;
+		color: #3c9b62;
+		width: 82px;
+		height: 82px;
+		border-radius: 99px;
+		background-color: #f9fbfc;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+

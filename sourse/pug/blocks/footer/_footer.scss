@@ -1,7 +1,50 @@
 .footer {
-		
+		background-color: #f8f8f8;
+		border-top: rem(8) solid #e6eaee;
+		&__body{
+			font-size: rem(15);
+			padding-top: rem(60);
+			padding-bottom: rem(40);
+				}
+		li{
+			list-style: none;
+			margin-bottom: 1rem;
+			min-width: rem(140);
+			.icon{
+				font-size: rem(21);
+				color: #2F4967;
+			}
+			a{
+				color: #6E85A3;
+				&:hover{
+					color: #286EC8;
+				}
+			}
+		}
+				.icon{
+					font-size: rem(21);
+					margin-right: rem(9);
+				}
+		&__link{
+			color: #20426B;
+			display: inline-block;margin-bottom: 2rem;
+				&:hover {
+					color: #286EC8;
+				}
+		}
 
-
+		&__title{
+			color: #20426B;
+			@extend .h6;
+			@extend .mono;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		&__footer{
+		 background: #20426B;
+		 color: #ffffff;
+		 padding: rem(20) 0;
+		}
 // 
 @include media-breakpoint-up(xl) {}
 

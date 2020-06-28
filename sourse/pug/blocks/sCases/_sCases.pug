@@ -1,0 +1,21 @@
+mixin sCases()
+	// start sCases
+	+b.SECTION.sCases.section#sCases&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Более 100 выполненных проектов
+				+e.text Мы&nbsp;создаем инструменты помогающие вашему бизнесу
+			.row
+				mixin item(i)
+					+e.col.col-md-4
+						+e.item(href="#")
+							+e.DIV.img-wrap.bg-wrap
+								img.img-bg.object-fit-js(src=`img/@2x/case-${i}.jpg` alt="")
+								+e.label Дизайн сайтов
+							+e.DIV.caption
+								+e.DIV.title Разработка дизайна сайта для компании «First»
+				+item('1')
+				+item('2')
+				+item('3')
+
+	// end sCases
