@@ -1,6 +1,9 @@
 .footer {
 		background-color: #f8f8f8;
 		border-top: rem(8) solid #e6eaee;
+		&__logo{
+			margin-bottom: rem(24);
+		}
 		&__body{
 			font-size: rem(15);
 			padding-top: rem(60);

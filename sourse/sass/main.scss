@@ -40,6 +40,9 @@ $output-bourbon-deprecation-warnings: false;
 @import "./node_modules/bootstrap/scss/card";
 @import "./node_modules/bootstrap/scss/breadcrumb";
 .breadcrumb {
+	a{
+		color: #b0becf;
+	}
 	.active {
 		a {
 			// color: $breadcrumb-active-color;

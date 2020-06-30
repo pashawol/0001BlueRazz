@@ -1,0 +1,58 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAdvantages/_sAdvantages.pug 
+include ../blocks/sWork/_sWork.pug 
+include ../blocks/sCases/_sCases.pug 
+include ../blocks/sAbout/_sAbout.pug 
+include ../blocks/sArticals/_sArticals.pug 
+include ../blocks/sNews/_sNews.pug 
+include ../blocks/sFaq/_sFaq.pug 
+include ../blocks/sArticals/_sArticals.pug 
+
+block variables
+	- let  mainPage=  null
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent 
+	+mob-mnu()
+	+header()
+		+top-nav()
+		//- +topLine() 
+	.alert-top
+		.container
+			+icon("flame")
+			| Что такое дизайн?
+	.container
+		+breadcrumb("Главная","Интернет-магазин")
+		.row
+			.col-lg-8
+				+b.head-page
+					.row
+						.col
+							+e.label РАЗДЕЛ
+						+e.item.col-auto
+							+icon("eye")
+							| 10989
+						+e.item.col-auto
+							+icon("clock")
+							| 1 мин.
+					h1 Заголовок статьи
+				img.res-i(src="img/@2x/img.jpg", alt="")
+				section.section.sContent 
+					p Типы категорий соответствуют мысленным представлениям пользователя и были протестированы с целевой группой.
+					p Количество основных категорий ограничено (желательно менее 8).
+					p Если существует несколько категорий, то они делятся на основные и подкатегории.
+					p Если продукт соответствует более чем одной категории, он перечисляется во всех категориях, которым соответствует
+			.col
+				.h4.ttu.text-dark  УСЛУГИ
+				+b.aside
+					ul
+						li.current-menu-item: a(href="#") Дизайн многостраничных сайтов
+						li: a(href="#") Дизайн лендингов
+						li: a(href="#") Редизайн сайта
+	+footer()
+	

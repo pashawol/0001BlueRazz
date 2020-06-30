@@ -22,20 +22,68 @@
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
-	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+	<body class="main-page"><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-lg-none">
-				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+				<div class="top-nav block-with-lazy">
+					<div class="container">
+						<div class="row">
+							<div class="top-nav__logo col"><a href="#"><img src="img/@2x/logo.png" alt=""/></a>
+							</div>
+							<div class="col-auto d-lg-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="menu-mobile__inner">
-					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="menu-item current-menu-item"><a href="#" itemprop="url">ПОРТФОЛИО</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">УСЛУГИ</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">БАЗА ЗНАНИЙ</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">АВТОР</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">КОНТАКТЫ</a></li>
-					</ul>
-					<div class="p-3"><a class="top-nav__btn" href="#">ОСТАВИТЬ ЗАЯВКУ</a></div>
+					<div class="menu-mobile__menu">
+						<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<li class="menu-item current-menu-item menu-item-has-children"><a href="#" itemprop="url">ПОРТФОЛИО</a>
+								<ul class="sub-menu sub-menu--main">
+									<li class="menu-item menu-item-has-children">
+										<ul class="sub-menu">
+											<li class="menu-item"><a href="#">Интернет-магазин</a></li>
+											<li class="menu-item"><a href="#">Landing page</a></li>
+											<li class="menu-item"><a href="#">Брендинг</a></li>
+											<li class="menu-item"><a href="#">SMM</a></li>
+											<li class="menu-item"><a href="#">Другое</a></li>
+										</ul>
+										<ul class="sub-menu sub-menu--thumbnails">
+											<li class="menu-item"><a href="#"><img src="img/@2x/case-1.jpg" alt=""/>9 плагинов Figma, которые облегчат жизнь любого дизайнера</a></li>
+											<li class="menu-item"><a href="#"><img src="img/@2x/case-1.jpg" alt=""/>9 плагинов Figma, которые облегчат жизнь любого дизайнера</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">УСЛУГИ</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">БАЗА ЗНАНИЙ</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">АВТОР</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">КОНТАКТЫ</a></li>
+						</ul>
+					</div>
+					<div class="sCases">
+						<div class="container">
+							<div class="ttu strong text-dark mb-4">Популярное</div>
+								<div class="sCases__col"><a class="sCases__item" href="#">
+									<div class="sCases__img-wrap bg-wrap"><img class="img-bg object-fit-js" src="img/@2x/case-1.jpg" alt=""/>
+									</div>
+									<div class="sCases__caption">
+										<div class="sCases__title">Разработка дизайна сайта для компании «First»
+										</div>
+									</div></a>
+								</div>
+								<div class="sCases__col"><a class="sCases__item" href="#">
+									<div class="sCases__img-wrap bg-wrap"><img class="img-bg object-fit-js" src="img/@2x/case-2.jpg" alt=""/>
+									</div>
+									<div class="sCases__caption">
+										<div class="sCases__title">Разработка дизайна сайта для компании «First»
+										</div>
+									</div></a>
+								</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!--  мобильное меню-->
@@ -45,22 +93,60 @@
 				<div class="top-nav block-with-lazy">
 					<div class="container">
 						<div class="row">
+							<div class="col-auto d-lg-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+								</div>
+							</div>
 							<div class="top-nav__logo col-lg-auto col"><a href="#"><img src="img/@2x/logo.png" alt=""/></a>
 							</div>
 							<div class="col d-none d-lg-block">
 								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-item current-menu-item"><a href="#" itemprop="url">ПОРТФОЛИО</a></li>
+									<li class="menu-item current-menu-item menu-item-has-children"><a href="#" itemprop="url">ПОРТФОЛИО</a>
+										<ul class="sub-menu sub-menu--main">
+											<li class="menu-item menu-item-has-children">
+												<ul class="sub-menu">
+													<li class="menu-item"><a href="#">Интернет-магазин</a></li>
+													<li class="menu-item"><a href="#">Landing page</a></li>
+													<li class="menu-item"><a href="#">Брендинг</a></li>
+													<li class="menu-item"><a href="#">SMM</a></li>
+													<li class="menu-item"><a href="#">Другое</a></li>
+												</ul>
+												<ul class="sub-menu sub-menu--thumbnails">
+													<li class="menu-item"><a href="#"><img src="img/@2x/case-1.jpg" alt=""/>9 плагинов Figma, которые облегчат жизнь любого дизайнера</a></li>
+													<li class="menu-item"><a href="#"><img src="img/@2x/case-1.jpg" alt=""/>9 плагинов Figma, которые облегчат жизнь любого дизайнера</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
 									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">УСЛУГИ</a></li>
 									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">БАЗА ЗНАНИЙ</a></li>
 									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">АВТОР</a></li>
 									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">КОНТАКТЫ</a></li>
 								</ul>
 							</div>
+							<div class="col-auto">
+								<div class="top-nav__toggle-search toggle-search-js">
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg>
+								</div>
+							</div>
 							<div class="col-auto d-none d-sm-block"><a class="top-nav__btn" href="#">ОСТАВИТЬ ЗАЯВКУ</a>
 							</div>
-							<div class="col-auto d-lg-none">
-								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-								</div>
+						</div>
+					</div>
+					<div class="search-block">
+						<div class="container">
+							<button>
+								<svg class="icon icon-search ">
+									<use xlink:href="img/svg/sprite.svg#search"></use>
+								</svg>
+							</button>
+							<input type="text" placehoder="Что будем искать? Напишите"/>
+							<div class="search-block__toggle-search toggle-search-js">
+								<svg class="icon icon-times ">
+									<use xlink:href="img/svg/sprite.svg#times"></use>
+								</svg>
 							</div>
 						</div>
 					</div>
@@ -163,7 +249,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="sWork__col col"><a class="sWork__item" href="#">
+						<div class="sWork__col col-md"><a class="sWork__item" href="#">
 									<div class="sWork__icon-wrap">
 										<svg class="icon icon-paint-brush ">
 											<use xlink:href="img/svg/sprite.svg#paint-brush"></use>
@@ -175,7 +261,7 @@
 										<p>Хороший дизайн&nbsp;&mdash; это довольные пользователи и&nbsp;лояльные клиенты.</p>
 									</div></a>
 						</div>
-						<div class="sWork__col col"><a class="sWork__item" href="#">
+						<div class="sWork__col col-md"><a class="sWork__item" href="#">
 									<div class="sWork__icon-wrap">
 										<svg class="icon icon-code ">
 											<use xlink:href="img/svg/sprite.svg#code"></use>
@@ -434,12 +520,12 @@
 									<h2>Вопросы-Ответы</h2>
 								</div><a class="card card--horizontal card--faq mb-4" href="#">
 									<div class="row g-0">
-										<div class="col-sm-auto col">
+										<div class="col-sm-auto col d-none d-sm-block">
 											<div class="img-circle"><img class="card-img-top" src="img/@2x/faq-1.jpg" alt=""/></div>
 										</div>
-										<div class="col-auto order-md-last"><span class="card__number">3</span>
+										<div class="col-auto order-sm-last"><span class="card__number">3</span>
 										</div>
-										<div class="col-sm align-self-center">
+										<div class="col align-self-center">
 											<div class="card-body">
 												<h5 class="card-title">
 													<div class="text-dark">9 плагинов Figma, которые облегчат жизнь любого дизайнера</div>
@@ -448,12 +534,12 @@
 										</div>
 									</div></a><a class="card card--horizontal card--faq mb-4" href="#">
 									<div class="row g-0">
-										<div class="col-sm-auto col">
+										<div class="col-sm-auto col d-none d-sm-block">
 											<div class="img-circle"><img class="card-img-top" src="img/@2x/faq-2.jpg" alt=""/></div>
 										</div>
-										<div class="col-auto order-md-last"><span class="card__number">1</span>
+										<div class="col-auto order-sm-last"><span class="card__number">1</span>
 										</div>
-										<div class="col-sm align-self-center">
+										<div class="col align-self-center">
 											<div class="card-body">
 												<h5 class="card-title">
 													<div class="text-dark">9 плагинов Figma, которые облегчат жизнь любого дизайнера</div>
@@ -462,12 +548,12 @@
 										</div>
 									</div></a><a class="card card--horizontal card--faq mb-4" href="#">
 									<div class="row g-0">
-										<div class="col-sm-auto col">
+										<div class="col-sm-auto col d-none d-sm-block">
 											<div class="img-circle"><img class="card-img-top" src="img/@2x/faq-3.jpg" alt=""/></div>
 										</div>
-										<div class="col-auto order-md-last"><span class="card__number">6</span>
+										<div class="col-auto order-sm-last"><span class="card__number">6</span>
 										</div>
-										<div class="col-sm align-self-center">
+										<div class="col align-self-center">
 											<div class="card-body">
 												<h5 class="card-title">
 													<div class="text-dark">9 плагинов Figma, которые облегчат жизнь любого дизайнера</div>
@@ -476,12 +562,12 @@
 										</div>
 									</div></a><a class="card card--horizontal card--faq mb-4" href="#">
 									<div class="row g-0">
-										<div class="col-sm-auto col">
+										<div class="col-sm-auto col d-none d-sm-block">
 											<div class="img-circle"><img class="card-img-top" src="img/@2x/faq-4.jpg" alt=""/></div>
 										</div>
-										<div class="col-auto order-md-last"><span class="card__number">1</span>
+										<div class="col-auto order-sm-last"><span class="card__number">1</span>
 										</div>
-										<div class="col-sm align-self-center">
+										<div class="col align-self-center">
 											<div class="card-body">
 												<h5 class="card-title">
 													<div class="text-dark">9 плагинов Figma, которые облегчат жизнь любого дизайнера</div>

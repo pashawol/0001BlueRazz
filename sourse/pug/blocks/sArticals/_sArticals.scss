@@ -85,7 +85,10 @@
 
 		border-radius: 18px;
 		background-color: #ffffff;
-		padding: rem(14);
+			@include media-breakpoint-up(md) {
+
+				padding: rem(14);
+			}
 		.row{
 			align-items: center;
 		}

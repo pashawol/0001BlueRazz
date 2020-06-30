@@ -25,11 +25,13 @@
 		&__item{
 			border-radius: 2px;
 			background-color: #ffffff;
-			min-height: 100%;
 			display: flex;
 			align-items: center;
 			align-items: center;
 			color: $secondary;
+			@include media-breakpoint-up(md){
+				min-height: 100%;
+			}
 			@include media-breakpoint-up(sm){
 				padding: 0;
 			}
@@ -40,7 +42,7 @@
 			}
 			.icon{
 				color: $primary; 
-				@include media-breakpoint-up(sm){
+				@include media-breakpoint-up(md){
 
 					font-size: $h2-font-size;  
 				}
@@ -52,7 +54,7 @@
 
 	
 		&__icon-wrap{
-			@include media-breakpoint-up(sm) {
+			@include media-breakpoint-up(md) {
 
 				width: rem(142);
 				height: rem(159);
@@ -90,10 +92,15 @@
 			margin-bottom: rem(26);
 
 		}
-		@include media-breakpoint-up(xl) {
-
-			&__col--left &__item {
+		
+		&__col--left {
+			margin-bottom: 0;
+		}
+		&__col--left &__item {
+			margin-bottom: rem(26);
+			@include media-breakpoint-up(xl) {
 				min-height: 1px;
+				margin-bottom: 0;
 			.icon{
 				font-size: $h3-font-size;
 				margin-left: 6%;
@@ -109,7 +116,10 @@
 			line-height: ($h5-font-size / $h6-font-size);
 			text-transform: uppercase;
 			color: $dark;
-			max-width: rem(145);
+				@include media-breakpoint-up(md) {
+
+					max-width: rem(145);
+				}
 		}
 		 
 	@include media-breakpoint-up(xl) {}
@@ -132,8 +142,20 @@
 	//
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	@include media-breakpoint-down(md) {
+
+		
+	}
+	@include media-breakpoint-down(md) {
+.sWork__title {
+	margin-bottom: 0;
+}
+
+p {
+	display: none;
+}
+	}
+	@include media-breakpoint-down(xs) {
+	} 
 
 } // end.sWork

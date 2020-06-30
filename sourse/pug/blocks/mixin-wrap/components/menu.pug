@@ -7,8 +7,21 @@ mixin mnu()
 			"КОНТАКТЫ":"#",
 			}
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
-		li.menu-item.current-menu-item
+		li.menu-item.current-menu-item.menu-item-has-children
 			a(href="#" itemprop="url") ПОРТФОЛИО
+			ul.sub-menu.sub-menu--main
+				li.menu-item.menu-item-has-children
+					ul.sub-menu
+						li.menu-item: a(href="#") Интернет-магазин
+						li.menu-item: a(href="#") Landing page
+						li.menu-item: a(href="#") Брендинг
+						li.menu-item: a(href="#") SMM
+						li.menu-item: a(href="#") Другое
+					ul.sub-menu.sub-menu--thumbnails
+							- for (var x = 0; x < 2; x++)
+								li.menu-item: a(href="#")
+									img(src="img/@2x/case-1.jpg", alt="")
+									| 9 плагинов Figma, которые облегчат жизнь любого дизайнера
 		 
 		each linkPatch, linkName in nav
 			li.menu-item(itemprop="item" ): a(href= linkPatch itemprop="url")= linkName

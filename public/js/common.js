@@ -109,7 +109,11 @@ function eventHandler() {
 	$(window).resize(function () {
 		heightses();
 	});
-	heightses(); // листалка по стр
+	heightses();
+	$(".menu-mobile .menu-item-has-children> a").click(function () {
+		$(this).next().slideToggle();
+		return false;
+	}); // листалка по стр
 
 	$(" .top-nav li a, .scroll-link").click(function () {
 		var elementClick = $(this).attr("href");
@@ -139,27 +143,31 @@ function eventHandler() {
 	} //axilary funcs
 
 
-	animateElem.call("#headerBlock", '#artical', .1, {
-		y: -80,
-		x: -50
-	}, {
-		y: 100,
+	animateElem.call("#headerBlock", '#artical', .1, {}, {
+		y: -100,
 		x: 0
 	});
 	animateElem.call("#headerBlock", '#element--1', .1, {
-		y: -80,
-		x: -150
+		x: -50
 	}, {
 		y: 100,
 		x: 0
 	});
 	animateElem.call("#headerBlock", '#element--2', .1, {
-		y: 80,
-		x: 150
+		x: 50
 	}, {
 		y: -50,
 		x: -50
 	}); // animateElem.call("#headerBlock", '#element--3', .1, { y: -80, x: -50 }, { y: 100, x: 0 });
+
+	var toggleSearch = document.querySelectorAll('.toggle-search-js');
+	var blockSearch = document.querySelector('.search-block');
+	toggleSearch.forEach(function (element) {
+		element.addEventListener('click', function () {
+			blockSearch.classList.toggle('showEl');
+			return false;
+		});
+	});
 }
 
 ;

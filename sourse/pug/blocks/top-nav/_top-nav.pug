@@ -9,29 +9,55 @@ mixin mob-mnu()
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js
-			span
+		+b.top-nav.block-with-lazy
+			.container
+				.row
+					+e.logo.col
+						a(href="#")
+							img(src="img/@2x/logo.png", alt="")
+					.col-auto.d-lg-none
+						+b.toggle-menu-mobile--js
+							span
 		+e.inner
-		
-			+mnu()
-			.p-3
-				a.top-nav__btn(href="#") ОСТАВИТЬ ЗАЯВКУ
+			+e.menu
+				+mnu()
+			+b.sCases
+				.container
+					.ttu.strong.text-dark.mb-4 Популярное
+					mixin item(i)
+						+e.col
+							+e.item(href="#")
+								+e.DIV.img-wrap.bg-wrap
+									img.img-bg.object-fit-js(src=`img/@2x/case-${i}.jpg` alt="") 
+								+e.DIV.caption
+									+e.DIV.title Разработка дизайна сайта для компании «First»
+					+item('1')
+					+item('2') 
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
 			.row
+				.col-auto.d-lg-none
+					+b.toggle-menu-mobile--js
+						span
 				+e.logo.col-lg-auto.col
 					a(href="#")
 						img(src="img/@2x/logo.png", alt="")
 				.col.d-none.d-lg-block
 					+mnu()
+				.col-auto
+					+e.toggle-search.toggle-search-js
+						+icon("search")
+
 				.col-auto.d-none.d-sm-block
 					+e.btn(href="#") ОСТАВИТЬ ЗАЯВКУ
-				.col-auto.d-lg-none
-					+b.toggle-menu-mobile--js.d-lg-none
-						span
-
-					
+		+b.search-block
+			.container
+				button
+					+icon("search")
+				input(type="text" placehoder="Что будем искать? Напишите")
+				+e.toggle-search.toggle-search-js
+					+icon("times")
 	// end top-nav

@@ -1,14 +1,14 @@
 // мобильное меню
 
 // мобильное меню
-$h: em(2);
+$h: 4px;
 
 .toggle-menu-mobile {
 	display: block;
 	height: $h* 12;
 	position: relative;
 	color: $primary;
-	font-size: 32px;
+	font-size: 22px;
 
 	&.on {
 		color: #ffffff;
@@ -82,16 +82,22 @@ $h: em(2);
 	z-index: 999;
 	max-width: 85%;
 	height: 101vh;
-	width: 280px;
+	width: 380px;
 	top: 0;
 	// left: 0;
-	right: 0;
-	transform: translate(120%, 0);
+	left: 0;
+	transform: translate(-120%, 0);
 	@include mt(.6);
 	will-change: transform;
-
+	display: flex;
+	flex-direction: column;
+	.top-nav{
+		position: relative !important;
+		background-color: #fff !important;
+	}
 	&__inner {
-		background-color: #c3c3c3;
+		flex-grow: 1;
+		background-color: #fff;
 		padding: 5% 0;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
@@ -109,20 +115,19 @@ $h: em(2);
 	.toggle-menu-mobile {
 		// position: relative;
 		cursor: pointer;
-		margin-left: -15%;
-		position: absolute;
+	 
 		opacity: 0;
 		left: 0;
 		right: auto;
 		color: #FFF;
-		top: 10px;
+		margin-right: rem(30);
 		z-index: 9999;
 		background-color: transparent;
 
 		span,
 		span:after,
 		span:before {
-			background-color: #FFF;
+			background-color: #416086;
 		}
 
 		&.on {
@@ -146,9 +151,51 @@ $h: em(2);
 		a {
 			// font-size: 16px;
 
-			padding: 10px;
+			padding: 10px 15px;
 			display: block;
+			border-radius: 0px 7px 7px 0px;
+			&:hover{
+				background: rgba(231, 237, 244, 0.46);
+			}
 
+		}
+	}
+	.sCases{
+		&__img-wrap{
+			@include block(226, 94);
+		}
+		&__caption{
+			padding: rem(10);
+		}
+	}
+
+ .menu-item-has-children {
+
+		>a {
+			position: relative;
+
+			&::after {
+				content: '';
+				// position: absolute;
+				@include a-cent(y);
+				// left: 100%;
+				right: 15px;
+				background-image: url(../img/svg/chevron-down.svg);
+				width: rem(8);
+				height: rem(12);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+		}
+	} 
+	.sub-menu {
+		display: none;
+		.sub-menu{
+			display: block;
+		}
+		.sub-menu--thumbnails{
+			display: none;
 		}
 	}
 }

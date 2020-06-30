@@ -7,12 +7,12 @@ mixin sFaq()
 			mixin item-artical(i, t, n) 
 				+b.card--horizontal.--faq.mb-4(href="#")
 					.row.g-0
-						.col-sm-auto.col
+						.col-sm-auto.col.d-none.d-sm-block
 							.img-circle
 								img.card-img-top(src=`img/@2x/${i}.jpg`, alt='')
-						.col-auto.order-md-last
+						.col-auto.order-sm-last
 							+e.number= n
-						.col-sm.align-self-center
+						.col.align-self-center
 							.card-body
 								h5.card-title
 									.text-dark 9 плагинов Figma, которые облегчат жизнь любого дизайнера
