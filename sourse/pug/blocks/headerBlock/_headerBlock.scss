@@ -146,7 +146,7 @@
 
 		&--1{
 			top: -100px;
-			right: -250px;
+			right: -350px;
 			z-index: 2;
 			&::before{
 				content: url(../img/@2x/element-1.png);
@@ -155,7 +155,7 @@
 		
 		&--2{
 			top: 0;
-			right: -350px;
+			right: -90px;
 			z-index: 2;
 			&::before{
 				content: url(../img/@2x/element-2.png);
